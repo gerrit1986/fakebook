@@ -7,7 +7,7 @@
         <h1>Willkommen bei Sample!</h1>
         {% if user.is_authenticated %}
         <p>Hallo {{ user.first_name }}  {{ user.last_name }}, hier folgt dein Profilbild:</p>
-        <p><img src="https://graph.facebook.com/{{ user.social_uid }}/picture?width=200" alt="Dein Profilbild"/></p>
+        <p><img src="https://graph.facebook.com/{{ view.uid }}/picture?width=200" alt="Dein Profilbild"/></p>
         <a href="/logout/">Logout</a>
         {% else %}
         <a href="{% url 'social:begin' 'facebook' %}">Login</a>

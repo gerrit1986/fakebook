@@ -9,5 +9,5 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', IndexView.as_view()),
     url(r'^logout/$', 'login.views.log_out'),
-    url(r'^deauthorize/$, 'login.views.deauthorize'),
+    url(r'^deauthorize/$', 'login.views.deauthorize'),
 )
